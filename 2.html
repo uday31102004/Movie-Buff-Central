@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinematic Universe Fan Page</title>
+    <link rel="stylesheet" href="2.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Cinematic Universe Fan Page</h1>
+        <img src="C:\Users\Len IP 3\Downloads\2.jpg",width="1080" height="550" alt="RRR Movie Poster">
+        <h2>Explore the fictitious story of Indian superheroes!</h2>
+    </header>
+
+    <section id="character-bios">
+        <h3>Character Bios</h3>
+        <div class="character">
+            <img src="C:\Users\Len IP 3\Downloads\2.1.jpg" alt="Alluri Sitarama Raju">
+            <h3>Alluri Sitarama Raju</h3>
+            <p>An ambitious Indian Imperial Police officer in British Rule</p>
+            <p>Interesting Fact:He initially worked as police officer later joins bheem</p>
+        </div>
+        <div class="character">
+            <img src="C:\Users\Len IP 3\Downloads\2.2.jpg" alt="Komaram Bheem">
+            <h3>Komaram Bheem</h3>
+            <p>The tribe's guardian,Saviour of people in forests</p>
+            <p>Interesting Fact:Bheem was totally against the colonial rule.Unfortunately he saved alluri's life</p>
+        </div>
+        <!-- Add more characters similarly -->
+    </section>
+
+    <section id="trailers">
+        <h2>Movie Trailer</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/NgBoMJy386M?si=s2qmZ0slJtypiofB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
+
+    <section id="quote-of-the-day">
+        <h2>Quote of the Day</h2>
+        <p id="quote"></p>
+    </section>
+
+    <section id="trivia-quiz">
+        <h2>Trivia Quiz</h2>
+        <p>Question: Who is called as Saviour of Gonds</p>
+        <ul>
+            <li><button onclick="checkAnswer('Alluri Seetha Ramaraju')">Alluri Seetha Ramaraju</button></li>
+            <li><button onclick="checkAnswer('Komaram Bheem')">Komaram Bheem</button></li>
+            <li><button onclick="checkAnswer('Both of the above')">Both of the above</button></li>
+            <li><button onclick="checkAnswer('None')">None</button></li>
+        </ul>
+    </section>
+
+    <script>
+        // Quote of the Day feature
+        const quotes = [
+            "Be Brave.",
+            "I can do this all day.",
+            "Smash of Indian Revolutionaries!",
+            "Believe in yourself,You can achieve Anything."
+        ];
+        document.getElementById('quote').innerText = quotes[Math.floor(Math.random() * quotes.length)];
+
+        // Trivia Quiz check answer
+        function checkAnswer(answer) {
+            if (answer === 'Komaram Bheem') {
+                alert("Correct!");
+            } else {
+                alert("Try again!");
+            }
+        }
+    </script>
+</body>
+</html>
